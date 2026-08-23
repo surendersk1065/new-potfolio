@@ -63,7 +63,7 @@ const Contact = () => {
 
                 <div className="flex justify-center" >
                     <div className="my-8 bg-[#5540AF] px-6 py-3 rounded-xl text-white font-semibold cursor-pointer hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
-                        <a href='/surenderMyresume.pdf'>Download My Resume</a>
+                        <a href='/surenderMyresume.docx'>Download My Resume</a>
                     </div>
                 </div>
             </div>
