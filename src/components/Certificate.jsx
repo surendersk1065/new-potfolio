@@ -3,7 +3,7 @@ import { RiCertificate2Line } from "react-icons/ri";
 
 
 const Certificate = () => {
-    const cert = ["React.js Certificate on Udemy", "Cognizant Salesforce Certificate", "Android Application Workshop Using Flutter and Dart", "AWS Cloud Foundation", "Value added Course in AngularJS", "Stigmata Cloud Certificate"]
+    const cert = ["Full Stack Mern Development Bootcamp(EMC)","React.js Certificate on Udemy", "Cognizant Salesforce Certificate", "Android Application Workshop Using Flutter and Dart", "AWS Cloud Foundation", "Value added Course in AngularJS", "Stigmata Cloud Certificate"]
     return (
         <div className='md:px-38 px-8 min-h-screen py-24'>
             <h1 className='font-extrabold text-3xl text-[#5540AF] mb-8'>Certficates</h1>
