@@ -9,6 +9,8 @@ body {
   font-style: normal;
 
   height: 100vh;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 .app{
   background-image: url("./assets/bg.png");

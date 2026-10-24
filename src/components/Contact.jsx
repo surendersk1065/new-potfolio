@@ -3,6 +3,7 @@ import { FaLinkedin } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa6";
 import { CiMail } from "react-icons/ci";
 import { FaPhoneAlt } from "react-icons/fa";
+import { motion } from 'motion/react';
 
 
 const Contact = () => {
@@ -39,7 +40,12 @@ const Contact = () => {
 
     return (
         <>
-            <div className='md:px-38 px-8 min-h-screen py-24' id='contact'>
+            <motion.div
+            initial={{opacity:0,y:50}}
+            whileInView={{opacity:1,y:0}}
+            viewport={{once:true,amount:0.3}}
+            transition={{duration:0.8}}
+            className='md:px-38 px-8 min-h-screen py-24' id='contact'>
                 <h1 className='font-extrabold text-3xl text-[#5540AF] mb-8'>Contact</h1>
 
                 <div className='text-center'>
@@ -48,25 +54,42 @@ const Contact = () => {
                         <p>I'm actively seeking Software Engineer, Full Stack Developer, Frontend Developer, Web developer, React js Developer opportunities. Feel free to reach out for full-time roles.</p>
                     </div>
                 </div>
-                <div className='grid grid-cols-2  lg:grid-cols-4 gap-3 '>
+                <motion.div 
+                initial={{ scale: 0 }}
+                whileInView={{ scale: 1 }}
+                transition={{
+                    type: "spring",
+                    stiffness: 200,
+                    damping: 10
+                    }}
+                className='grid grid-cols-2  lg:grid-cols-4 gap-3 '>
                     {contact.map((items) => {
                         return (
-                            <a href={items.link} target='_blank' className='bg-[#F4F3F8] p-8 rounded-2xl shadow-lg mb-2 hover:-translate-y-2 transition-all duration-300 font-bold ' >
+                            <motion.a 
+                            whileTap={{scale:0.9}}
+                            href={items.link} target='_blank' className='bg-[#F4F3F8] p-8 rounded-2xl shadow-lg mb-2 hover:-translate-y-2 transition-all duration-300 font-bold ' >
                                 <p className='text-4xl text-[#5540AF] mb-3'>{items.logo}</p>
                                 <p className='mb-3'>{items.name}</p>
                                 <p>{items.descp}</p>
-                            </a>
+                            </motion.a>
                         )
                     })}
 
-                </div>
+                </motion.div>
 
-                <div className="flex justify-center" >
+                <motion.div 
+                animate={{ y: [0, -10, 0] }}
+                transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                }}
+                className="flex justify-center" >
                     <div className="my-8 bg-[#5540AF] px-6 py-3 rounded-xl text-white font-semibold cursor-pointer hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
                         <a href='/surenderMyresume.docx'>Download My Resume</a>
                     </div>
-                </div>
-            </div>
+                </motion.div>
+            </motion.div>
 
 
         </>

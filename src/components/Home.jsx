@@ -5,6 +5,7 @@ import { FaGithub } from "react-icons/fa6";
 import { CiMail } from "react-icons/ci";
 import img1 from '../assets/img1.webp'
 import { FaAngleUp } from "react-icons/fa";
+import Navbar from '../common/Navbar';
 
 
 const Home = () => {
@@ -27,6 +28,7 @@ useEffect(() => {
 
     return (
 <div className="flex flex-col lg:flex-row items-center px-6 lg:px-16 gap-10 text-white" id='home'>
+    <Navbar />
 
     {/* Image Section */}
     <div className="w-full lg:w-[40%] flex justify-center">

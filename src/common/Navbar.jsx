@@ -56,7 +56,7 @@ const Navbar = () => {
                         <a href='#skills' onClick={() => setMenuOpen(false)}>Skills</a>
                         <a href='#contact' onClick={() => setMenuOpen(false)}>Contact</a>
             </div>
-            <Home />
+            {/* <Home /> */}
         </div>
     )
 }
