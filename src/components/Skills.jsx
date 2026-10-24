@@ -37,20 +37,20 @@ const Skills = () => {
 
     return (
         <div
-            className="md:px-38 px-8 min-h-screen py-24"
+            className="md:px-38 px-6 min-h-screen py-16 md:py-24 overflow-x-hidden"
             id="skills"
         >
             <h1 className="font-extrabold text-3xl text-[#5540AF] mb-8">
                 Technical Skills
             </h1>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 font-bold">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 font-bold">
                 {skills.map((items, index) => (
                     <motion.div
                         key={items.id}
                         initial={{
                             opacity: 0,
-                            x: index % 2 === 0 ? -60 : 60
+                            x: index % 2 === 0 ? -40 : 40 // Adjusted mobile offset to avoid overflow
                         }}
                         whileInView={{
                             opacity: 1,
@@ -64,17 +64,17 @@ const Skills = () => {
                             duration: 0.6,
                             ease: "easeOut"
                         }}
-                        className="bg-[#F4F3F8] p-8 rounded-2xl shadow-lg mb-2 hover:-translate-y-2 transition-all duration-300"
+                        className="bg-[#F4F3F8] p-6 md:p-8 rounded-2xl shadow-lg hover:-translate-y-2 transition-all duration-300"
                     >
                         <p className="text-xl font-extrabold mb-5">
                             {items.name}
                         </p>
 
-                        <ul className="flex flex-wrap gap-3">
+                        <ul className="flex flex-wrap gap-2.5">
                             {items.skill.map((val) => (
                                 <li
                                     key={val}
-                                    className="bg-[#5540AF] text-white p-3 rounded-lg font-light w-36"
+                                    className="bg-[#5540AF] text-white py-2 px-3 text-center rounded-lg font-light flex-1 min-w-[100px] sm:w-36"
                                 >
                                     {val}
                                 </li>
